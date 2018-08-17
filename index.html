@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <title>团队评价管理系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="widget/layui/css/layui.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="widget/layui/layui.js"></script>
+    <script>
+        var all=0;
+        //注意：导航 依赖 element 模块，否则无法进行功能性操作
+        layui.use(['jquery','element','table','layer'], function(){
+            var element = layui.element;
+            var table = layui.table;
+            var $=layui.$;
+            var layer = layui.layer
+        });
+    </script>
 </head>
+<style>
+    body{ margin:0;background-color:#ebebeb}
+    .warn{color:red}
+    #welcome{height:40px;font-size: 20pt;text-align: center;line-height: 40px;padding-top: 100px;color: blue}
+</style>
 <body>
-Hello World!
-GitHub上的第一个首页
+
+<div id="container">
+    <ul class="layui-nav layui-bg-cyan">
+        <li class="layui-nav-item layui-this" id="index"><a href="{$ROOT}/phone/index/index"><i class="layui-icon">&#xe68e;</i>平台首页</a></li>
+        <li class="layui-nav-item" id="expert"><a href="{$ROOT}/phone/index/index"><i class="layui-icon">&#xe63c;</i>会议记录</a></li>
+        <li class="layui-nav-item" id="inter"><a href="{$ROOT}/phone/index/result"><i class="layui-icon">&#xe615;</i>团队互评</a></li>
+        <li class="layui-nav-item" id="inteam"><a href="{$ROOT}/phone/index/result"><i class="layui-icon">&#xe770;</i>成员评价</a></li>
+        <li class="layui-nav-item" id="password"><a href="{$ROOT}/phone/index/result"><i class="layui-icon">&#xe673;</i>修改密码</a></li>
+        <li class="layui-nav-item" id="exit"><a href="{$ROOT}/phone/index/result"><i class="layui-icon">&#x1007;</i>注销登录</a></li>
+    </ul>
+    <div id="welcome">欢迎使用团队评价管理系统</div>
+</div>
+
 </body>
 </html>
